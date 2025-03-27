@@ -14,12 +14,14 @@ func main() { // Fonction principale où l'exécution du programme commence.
 
     // Appel de la fonction `Hello` du package `greetings` pour obtenir un message de salutation.
     // L'argument "" (chaîne vide) est passé, donc on s'attend à ce que `Hello` gère cela (probablement avec un message par défaut ou une erreur).
-    message, err := greetings.Hello("Wifak") // On attend un message de type string et une erreur possible.
+    // message, err := greetings.Hello("Wifak") // On attend un message de type string et une erreur possible.
 
+		names := []string {"Wifak","Fanny","Bassirath"}
+		messages , err := greetings.Hellos(names)
     if err != nil { // Si une erreur se produit (par exemple, si le nom est vide ou non valide dans la fonction `Hello`),
         log.Fatal(err) // On enregistre l'erreur et on termine le programme immédiatement.
     }
 
     // Si aucune erreur ne se produit, on affiche le message retourné par la fonction `Hello`.
-    fmt.Println(message) // Affiche le message dans la console.
+    fmt.Println(messages) // Affiche le message dans la console.
 }
